@@ -8,10 +8,9 @@ const connect = require('./config/database');
 const auth = require('./middleware/auth');
 const verifyRefreshToken = require('./utils/verifyRefreshToken');
 const UserRefreshToken = require('./model/userRefreshToken');
-const googleRoute = require('./routes/googleRoute');
-const discordRoute = require('./routes/discordRoute');
+const googleRoute = require('./strategies/googleAuth');
+const discordRoute = require('./strategies/discordAuth');
 dotenv.config();
-// require('./middleware/googleAuth');
 
 connect();
 
